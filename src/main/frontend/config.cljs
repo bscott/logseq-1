@@ -39,7 +39,7 @@
 
 (defn git-pull-secs
   []
-  (if dev?
+  (if dev? ; FIXME
     (* 60 5)
     (or 60 (get-in @state/state [:config :git-pull-secs]))))
 
